@@ -116,10 +116,148 @@
 }
 
 
+
+@media screen and (max-width: 600px) {
+      .tech-stack {
+        flex-direction: column;
+        align-items: center;
+      }
+      .tech-stack div {
+        margin-bottom: 20px;
+      }
+    }
+
+
+	.tech-stack img {
+    border-radius: 50%;
+	border-width: 0px;
+    max-width: 100px;  /* Set maximum width */
+    max-height: 100px; /* Set maximum height */
+    width: auto;
+    height: auto;
+  }
+
+	img {
+      border: 2px solid black;
+	  width: 250px;
+    }
+    .flex-container {
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+      border: 2px solid white;
+      padding: 10px;
+      width: 100%;
+	  margin: auto;
+      position: relative;
+      top: -150px; /* Add this line */
+	  margin-left: 0;
+	  
+    }
+    .list-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100%;
+      margin-left: 20px;
+    }
+    .button-container {
+      display: flex;
+      justify-content: space-between;
+    }
+	button {
+  margin-top: 10px;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 50px;
+  background-color: yellow; /* Add this line */
+  color: black; /* Add this line */
+}
+
+    .github-button {
+      margin-left: 20px; /* Add this line */
+    }
+
+	@media (max-width: 768px) {
+    .flex-container {
+      flex-direction: column;
+      align-items: center;
+    }
+    .list-container {
+      margin-left: 0;
+    }
+  }
+
+  #home-section {
+  background-image: url('https://t4.ftcdn.net/jpg/02/00/68/69/360_F_200686969_GJ7zbz2qaNIE4dyHSbZkQXvNPzRuwlr3.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+
+.photo{
+	background-image: url("images/bg_2.png");
+	height: 300px;
+	width: 280px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	border-radius: 50%;
+	border: 2px solid black;
+	background-color: yellow;
+}
+
+.info{
+	width: 50%;
+	height: 40vh;
+	display: flex;
+	justify-content: center;
+	align-items: flex-start;
+	flex-direction: column;
+	/* border: 1px solid yellow; */
+}
+
+@media screen and (max-width:820px) {
+
+#home-section{
+	flex-direction: column-reverse;
+}
+
+.info{
+	width: 90%;
+	align-items: center;
+}
+
+}
+
+.name{
+
+	color: #ffbd39;
+	font-weight: 900;
+}
+.detail{
+	color:white;
+	font-size: 25px;
+}
+
+
+.responsive-img {
+        max-width: 100%;
+        height: auto;
+        /* border: 2px solid white; */
+    }
+
 </style>
 
 
   </head>
+  
   <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
 	  
 	  
@@ -127,88 +265,44 @@
 	    <div class="container">
 	      <a class="navbar-brand" href="index.html">Ayush Kumar Singh</a>
 	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
+	        <span class="oi oi-menu"></span>
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav nav ml-auto">
 	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
 	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item">
+				<a href="https://drive.google.com/uc?export=download&id=1nCQnRW015rN_9D-phLOtUxvhfBfgitZl" class="nav-link">
+					<span>Resume</span>
+				</a>
+			</li>
+			
+			
+			
 	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
 	        </ul>
 	      </div>
 	    </div>
 	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-				<div class="one-third order-md-last img" style="background-image:url(images/bg_2.png); height:400px; width:400px; position:relative; top:-170px; right: -5px; border-radius: 50%;border: 10px solid yellow; box-sizing: border-box;">
-					<div class="overlay"></div>
-				</div>
-				
-				
-				
-				
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Ayush Kumar Singh</span></h1>
 
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Python Developer',
-						' Algorithm Developer',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <!-- <h2>Full Stack Web Developer</h2> -->
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://drive.google.com/file/d/1D7feRCnQtENg8_Mc8obnBtGJPSLVILDa/view?usp=drive_link" class="btn btn-primary py-3 px-4">View Resume</a> 
-							<a href="https://github.com/Shkmr07" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
+	  
+	 
+	<section class = "home" id="home-section" >
+		<div class ="info" >
+			<h2 class="name">Ayush Kumar Singh</h2>
+			<p class="detail">I'm a algorithm Developer</p>
+			<p><a href="https://drive.google.com/file/d/1nCQnRW015rN_9D-phLOtUxvhfBfgitZl/view?usp=drive_link" class="btn btn-primary py-2 px-3 mr-2">View Resume</a> 
+			<a href="https://github.com/Shkmr07" class="btn btn-white btn-outline-white py-2 px-3">GitHub</a></p>
+			
 		</div>
-    </section>
+		<div class = "photo"></div>
+		
+		
+	</section>
 
+	
 
 	<section class="ftco-section ftco-no-pb" id="about-section"  style="padding-top: 60px; margin-top: -60px;">
 		<div class="container">
@@ -221,92 +315,81 @@
 			</div>
 	</section>
 	
-	<section class="ftco-section ftco-no-pb" id="about-section"  style="padding-top: 60px; margin-top: -60px;">
+	<section class="ftco-section ftco-no-pb" id="about-section" style="padding-top: 60px; margin-top: -60px;">
 		<div class="container">
-			<div class="row justify-content-center pb-5">
-				<div class="col-md-10 heading-section text-center ftco-animate">
-					<h1 class="big big-2">Tech Stack</h1>
-					<h2 class="mb-4">Tech Stack</h2>
-					<div style="display: flex; justify-content: center; gap: 20px;">
-						<div>
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/2048px-Python.svg.png" alt="Python Logo" width="100" height="100" style="border-radius: 50%;">
-							<p>Python</p>
-						</div>
-						<div>
-							<img src="https://logos-world.net/wp-content/uploads/2023/02/JavaScript-Emblem.png" alt="JavaScript Logo" width="110" height="100" style="border-radius: 50%;">
-							<p>JavaScript</p>
-						</div>
-						<div>
-							<img src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png" alt="HTML5 Logo" width="100" height="100" style="border-radius: 50%;">
-							<p>HTML5</p>
-						</div>
-						<div>
-							<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS3 Logo" width="100" height="100" style="border-radius: 50%;">
-							<p>CSS3</p>
-						</div>
-					</div>
+		  <div class="row justify-content-center pb-5">
+			<div class="col-md-10 heading-section text-center ftco-animate">
+			  <h1 class="big big-2">Tech Stack</h1>
+			  <h2 class="mb-4">Tech Stack</h2>
+			  <div class="tech-stack" style="display: flex; justify-content: center; gap: 20px;">
+				<div>
+				  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0a/Python.svg/2048px-Python.svg.png" alt="Python Logo" width="100" height="100" style="border-radius: 50%;">
+				  <p>Python</p>
 				</div>
+				<div>
+				  <img src="https://www.pinclipart.com/picdir/big/16-165768_values-clipart.png" alt="JavaScript Logo" width="20" height="100" style="border-radius: 50%;">
+				  <p>JavaScript</p>
+				</div>
+				<div>
+				  <img src="https://icons.iconarchive.com/icons/cornmanthe3rd/plex/256/Other-html-5-icon.png" alt="HTML5 Logo" width="100" height="100" style="border-radius: 50%;">
+				  <p>HTML5</p>
+				</div>
+				<div>
+				  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/62/CSS3_logo.svg/800px-CSS3_logo.svg.png" alt="CSS3 Logo" width="100" height="100" style="border-radius: 50%;">
+				  <p>CSS3</p>
+				</div>
+				<div>
+					<img src="https://play-lh.googleusercontent.com/a4Xrc-8oQLu05mOrNPuvA_o2nZEIEnOoTH4wB91Slw_hCvuIu_Qgi440bK9mC8ml-KA" alt="CSS3 Logo" width="100" height="100" style="border-radius: 50%;">
+					<p>DSA</p>
+				  </div>
+			  </div>
 			</div>
-	</section>
-	
-	
-
-
+		  </div>
+		</div>
+	  </section>
 	
 
 
+	
+
+
 
 	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
+    <section class="ftco-section ftco-no-pb"style="position:relative; top:-70px;">
     	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-            <p>I have spent a year intensively studying and practicing Python programming and Data Structures & Algorithms. This has equipped me with a strong foundation in problem-solving, data manipulation, and algorithmic thinking. I’m capable of implementing efficient solutions for complex problems using Python and DSA.</p>
-          </div>
-        </div>
 
-		<div class="row justify-content-center mt-5">
-			<div class="col-md-6 text-center ftco-animate">
-				<p><a href="https://drive.google.com/uc?export=download&id=1D7feRCnQtENg8_Mc8obnBtGJPSLVILDa" class="btn btn-primary py-4 px-5">Download CV</a></p>
-
+			<div class="row">
+				<h1 class="big-4">Experience</h1>
+				<div class="underline"></div>
 			</div>
-		</div>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Experience</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
+			<br>
 		
-		<div class="row">
-				
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2017-2023</span>
-						<h2>CNC Machinist</h2>
-						<span class="position">Production Engineer</span>
-						<h6>Mss India Pvt Ltd</h6>
-						<p class="mt-4">Prepared and operated CNC machines for tasks including drilling, milling, and grinding.</li>
-								<li>Interpreted blueprints and mechanical drawings to understand and execute tasks.</li>
-								<li>Translated instructions into computer commands for precise machine operations.</li>
-							</ul>
-						</p>
+			<div class="row">
+					
+					<div class="col-md-6">
+						<div class="resume-wrap ftco-animate">
+							<span class="date">2017-2023</span>
+							<h2>CNC Machinist</h2>
+							<span class="position">Production Engineer</span>
+							<h6>Mss India Pvt Ltd</h6>
+							<p class="mt-4">Prepared and operated CNC machines for tasks including drilling, milling, and grinding.</li>
+									<li>Interpreted blueprints and mechanical drawings to understand and execute tasks.</li>
+									<li>Translated instructions into computer commands for precise machine operations.</li>
+								</ul>
+							</p>
+						</div>
+
 					</div>
-
 				</div>
+
+			<br>
+			<br>
+
+			<div class="row" >
+				<h1 class="big-4">Education</h1>
+				<div class="underline"></div>
 			</div>
-
-		<br>
-		<br>
-
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
+			<br>
 		
 			<div class="row">
     			<div class="col-md-6">
@@ -318,7 +401,7 @@
     				</div>
     			</div>
 
-    			<div class="col-md-6">
+    			<div class="col-md-6"">
     				<div class="resume-wrap ftco-animate">
     					<span class="date">2014-2017</span>
     					<h2>Diploma in Mechatronics</h2>
@@ -330,52 +413,85 @@
 
     	</div>
     </section>
-
-    <section class="ftco-section" id="project-section" >
+	
+    <section class="ftco-section" id="project-section"" >
       <div class="container">
         <div class="row justify-content-center mb-5 pb-5">
-          <div class="col-md-7 heading-section text-center ftco-animate">
+          <div class="col-md-7 heading-section text-center ftco-animate" style="position:relative; top:-100px;">
             <h1 class="big big-2">Projects</h1>
             <h2 class="mb-4">Projects</h2>
             <p>Below are the sample of  python projects.</p>
           </div>
         </div>
-        <div class="row d-flex">
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Shkmr07/MazeSolver" class="block-20 zoom-effect" style="background-image: url('images/proj_1.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/Shkmr07/MazeSolver">Terminal Based MazeSolver Using Python</a></h3>
-                <p>The ‘Terminal Based Maze Solver’ is a Python project that generates a random maze and uses a depth-first search algorithm to find a path from start to end.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry justify-content-end">
-              <a href="https://github.com/Shkmr07/Typing_Test" class="block-20 zoom-effect" style="background-image: url('images/proj_2.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/Shkmr07/Typing_Test">Terminal Based Typing Test Using Python</a></h3>
-                <p>Typing Master is a Python project that provides a fun platform for users to improve their typing skills through various tests.</p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4 d-flex ftco-animate">
-          	<div class="blog-entry">
-              <a href="https://github.com/Shkmr07/Calendar_project" class="block-20 zoom-effect" style="background-image: url('images/proj_3.png');">
-              </a>
-              <div class="text mt-3 float-right d-block">
 
-                <h3 class="heading"><a href="https://github.com/Shkmr07/Calendar_project">GUI Based Calendar Using Python</a></h3>
-                <p>This project is a simple, interactive calendar application built with Python’s Tkinter library and the tkcalendar widget.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-	<br>
+		<div class="flex-container">
+		
+			<img src="images/proj_1.png" alt="description_of_the_image"  class="responsive-img">
+
+			<div class="list-container">
+				<ul>
+					<h3>Terminal-Based Maze Solver</h3>
+					<li>Maze is randomly generated using Python's <strong>random module</strong>.</li>
+					<li>Maze consists of open spaces and walls, with walls occupying approximately <strong>25%</strong> of the total area.</li>
+					<li>The maze solver uses the <strong> Depth-First Search (DFS)</strong> algorithm to find a path through the maze.</li>
+					<li>The DFS algorithm starts at a random cell and explores as far as possible along each branch before backtracking.</li>
+					<li><Strong>Tech Stack :-</Strong> Python </li>
+			  </ul>
+			  <div class="button-container">
+				<button class="github-button" onclick="location.href='https://github.com/Shkmr07/MazeSolver';">GitHub Link</button>
+				<!-- <button onclick="location.href='https://your-deploy-link.com';">Deploy Link</button> -->
+			  </div>
+			</div>
+		  </div>
+		<br>
+
+		  <div class="flex-container">
+			<img src="images/proj_2.png" alt="description_of_the_image"  class="responsive-img">
+
+			<div class="list-container">
+				<ul>
+					<h3>Terminal-Based Typing Test</h3>
+					<li>Developed an <Strong>interactive typing test</Strong> using Python, showcasing the ability to create dynamic and engaging console applications.</li>
+					<li>Incorporated <strong>random sentence selection</strong> and precise <strong>time tracking</strong> to measure typing speed, demonstrating proficiency in Python's random and time modules.</li>
+					<li>Constructed a <strong>leaderboard</strong> to rank and display top typists, highlighting skills in data manipulation, dictionary usage, and data presentation in Python.</li>
+					<li>Provided <Strong>clear and intuitive user options</Strong> for starting the test, viewing the leaderboard, or exiting the program, reflecting a thoughtful and user-centric design approach.</li>
+					<li><Strong>Tech Stack :-</Strong> Python </li>
+					</ul>
+					
+				  
+			  <div class="button-container">
+				<button class="github-button" onclick="location.href='https://github.com/Shkmr07/Typing_Test';">GitHub Link</button>
+				<!-- <button onclick="location.href='https://your-deploy-link.com';">Deploy Link</button> -->
+			  </div>
+			</div>
+		  </div>
+
+		  <br>
+
+		  <div class="flex-container">
+			<img src="images/proj_3.png" alt="description_of_the_image" class="responsive-img">
+
+			<div class="list-container">
+				<ul>
+					
+					<h3>Python GUI Calendar</h3>
+					<li><strong>Utilized tkinter and tkcalendar libraries</strong> to create a user-friendly interface, showcasing the ability to work with external Python libraries.</li>
+					<li><strong>Incorporated features like date selection and display of selected date</strong>, enhancing the user experience.</li>
+					<li><strong>Designed the application to allow navigation between months and years</strong>, reflecting attention to detail and user-centric design.</li>
+					<li><Strong>Tech Stack :-</Strong> Python </li>
+				</ul>
+				  
+			  <div class="button-container">
+				<button class="github-button" onclick="location.href='https://github.com/Shkmr07/Calendar_project';">GitHub Link</button>
+				<!-- <button onclick="location.href='https://your-deploy-link.com';">Deploy Link</button> -->
+			  </div>
+			</div>
+		  </div>
+		   
+		
+	
 	  </div>
     </section>
 
@@ -444,7 +560,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/uc?export=download&id=1D7feRCnQtENg8_Mc8obnBtGJPSLVILDa">Resume Link</a></p>
+	            <p><a href="https://drive.google.com/uc?export=download&id=1nCQnRW015rN_9D-phLOtUxvhfBfgitZl">Resume Link</a></p>
 	          </div>
           </div>
 
